@@ -1,11 +1,11 @@
 
-Step 1- How to create order:-
-
+# Step 1- How to create order:-
+<?php
 use App\PaymentGateway\AliPay;
   $aop = new AliPay();
   $out_trade_no = $request->case_history_id . uniqid();
   $seller_id = config('alipay.seller_id');
-  $buyer_logon_id = $request->get('buyer_logon_id'); // 'ljekab2340@sandbox.com';
+  $buyer_logon_id = $request->get('buyer_logon_id'); 
   $subject = 'Umesh Software Payment: Case ID/Service ID: ' . $request->case_id . '/' . $request->case_history_id;
   $body = 'Umesh Software';
   $total_amount = $arrPaymentData->customer_price;
@@ -31,7 +31,7 @@ $paymentData = array();
                            }
                       }
        
-Step 2-Check response-:
+#Step 2-Check response-:
 
  $aop = new AliPay();
             $paymentData['out_trade_no'] = $ut_trade_no;
